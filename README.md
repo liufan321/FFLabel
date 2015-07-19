@@ -4,7 +4,7 @@ An interactive UILabel, can detect URLs, @username, #topic# automatically.
 
 ## Screenshots
 
-<img src="https://raw.github.com/FFLabel/screenshots/screenshots_1.png" alt="FFLabel" title="FFLabel">
+<img src="https://raw.github.com/liufan321/FFLabel/screenshots/screenshots_1.png" alt="FFLabel" title="FFLabel">
 
 ## Requirements
 
