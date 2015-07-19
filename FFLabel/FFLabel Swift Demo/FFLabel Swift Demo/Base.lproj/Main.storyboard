@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8152.3" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="J8e-mI-y63">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8124.4"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="tOW-4K-pPB">
+            <objects>
+                <tabBarController id="J8e-mI-y63" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="LAP-WN-9Rt">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="KJ0-co-PFI"/>
+                        <segue destination="wF1-sn-ETS" kind="relationship" relationship="viewControllers" id="0xW-U8-AIH"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="67a-5C-m7r" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-901" y="-205"/>
+        </scene>
+        <!--VC Demo-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FFLabel_Swift_Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#FFLabel# Hello @FFLabel" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZQx-8k-g2R" customClass="FFLabel" customModule="FFLabel">
+                                <rect key="frame" x="20" y="290" width="194" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ZQx-8k-g2R" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Ers-5i-fV8"/>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="ZQx-8k-g2R" secondAttribute="trailing" id="Wl3-84-nqg"/>
+                            <constraint firstItem="ZQx-8k-g2R" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="bzM-DZ-TBy"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="VC Demo" id="Zya-ut-pgh"/>
+                    <connections>
+                        <outlet property="label" destination="ZQx-8k-g2R" id="sxg-NB-PnX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-41" y="-600"/>
+        </scene>
+        <!--Tabel Demo-->
+        <scene sceneID="Lab-7z-y6a">
+            <objects>
+                <tableViewController id="wF1-sn-ETS" customClass="TableViewController" customModule="FFLabel_Swift_Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="40" sectionHeaderHeight="22" sectionFooterHeight="22" id="mBL-cy-ta3">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="szT-5z-vsM" customClass="DemoCell" customModule="FFLabel_Swift_Demo" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="22" width="600" height="40"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="szT-5z-vsM" id="SUe-Sd-EjS">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="39.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F5r-24-nXy" customClass="FFLabel" customModule="FFLabel">
+                                            <rect key="frame" x="8" y="8" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="F5r-24-nXy" secondAttribute="bottom" constant="2.5" id="7gC-QB-fBf"/>
+                                        <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="F5r-24-nXy" secondAttribute="trailing" id="Rhn-q8-d9X"/>
+                                        <constraint firstItem="F5r-24-nXy" firstAttribute="leading" secondItem="SUe-Sd-EjS" secondAttribute="leadingMargin" id="h2l-X0-BMp"/>
+                                        <constraint firstItem="F5r-24-nXy" firstAttribute="top" secondItem="SUe-Sd-EjS" secondAttribute="topMargin" id="tjf-Tu-6g9"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="contentLabel" destination="F5r-24-nXy" id="8Ic-wW-YRW"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="wF1-sn-ETS" id="6En-w0-PIm"/>
+                            <outlet property="delegate" destination="wF1-sn-ETS" id="ski-HZ-sBx"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Tabel Demo" id="KMa-m5-aCG"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NrO-Zk-X70" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-41" y="107"/>
+        </scene>
+    </scenes>
+</document>
