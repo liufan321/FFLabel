@@ -8,8 +8,9 @@
 
 import UIKit
 
+@objc
 public protocol FFLabelDelegate: NSObjectProtocol {
-    func labelDidSelectedLinkText(label: FFLabel, text: String)
+    optional func labelDidSelectedLinkText(label: FFLabel, text: String)
 }
 
 public class FFLabel: UILabel {
@@ -156,7 +157,7 @@ public class FFLabel: UILabel {
     public override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
         if selectedRange != nil {
             let text = (textStorage.string as NSString).substringWithRange(selectedRange!)
-            labelDelegate?.labelDidSelectedLinkText(self, text: text)
+            labelDelegate?.labelDidSelectedLinkText!(self, text: text)
             
             let when = dispatch_time(DISPATCH_TIME_NOW, Int64(0.25 * Double(NSEC_PER_SEC)))
             dispatch_after(when, dispatch_get_main_queue()) {

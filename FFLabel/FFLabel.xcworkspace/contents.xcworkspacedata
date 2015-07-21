@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:FFLabelObjcDemo/FFLabelObjcDemo.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:FFLabel Swift Demo/FFLabel Swift Demo.xcodeproj">
    </FileRef>
    <FileRef
