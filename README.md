@@ -43,6 +43,8 @@ For more information about how to use CocoaPods, I suggest [this tutorial](http:
 
 ## Usage
 
+### Swift
+
 * import framework
 
 ```swift
@@ -66,6 +68,35 @@ class ViewController: UIViewController, FFLabelDelegate
 ```swift
 func labelDidSelectedLinkText(label: FFLabel, text: String) {
     print(text)
+}
+```
+
+### Objective-C
+
+* import "ProjectName-Swift.h"
+
+```objc
+#import "FFLabelObjcDemo-Swift.h"
+```
+
+* set delegate and text
+
+```objc
+self.label.labelDelegate = self;
+self.label.text = @"#FFLabel#This is a @FFLabel Demo, access http://github.com/liufan321/fflabel can get the demo project. Follow @liufan2000 to get more information.";
+```
+
+* conform protocol
+
+```objc
+@interface ViewController () <FFLabelDelegate>
+```
+
+* implement protocal method
+
+```objc
+- (void)labelDidSelectedLinkText:(FFLabel * __nonnull)label text:(NSString * __nonnull)text {
+    NSLog(@"%@", text);
 }
 ```
 

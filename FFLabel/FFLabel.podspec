@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "FFLabel"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
 s.summary      = "An interactive UILabel, can detect URLs, @username, #topic# automatically."
   s.homepage     = "https://github.com/liufan321/FFLabel"
   s.license      = "MIT"
