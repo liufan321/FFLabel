@@ -12,8 +12,8 @@
 		C264BB5F1B5EFC0B00F11CA4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C264BB5E1B5EFC0B00F11CA4 /* ViewController.m */; };
 		C264BB621B5EFC0B00F11CA4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C264BB601B5EFC0B00F11CA4 /* Main.storyboard */; };
 		C264BB641B5EFC0B00F11CA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C264BB631B5EFC0B00F11CA4 /* Assets.xcassets */; };
-		C264BB671B5EFC0B00F11CA4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C264BB651B5EFC0B00F11CA4 /* LaunchScreen.storyboard */; };
 		C264BB701B5EFC1700F11CA4 /* FFLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C264BB6F1B5EFC1700F11CA4 /* FFLabel.swift */; };
+		D88C5F021B66E4790043B1D7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D88C5F011B66E4790043B1D7 /* LaunchScreen.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,9 +25,9 @@
 		C264BB5E1B5EFC0B00F11CA4 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		C264BB611B5EFC0B00F11CA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C264BB631B5EFC0B00F11CA4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		C264BB661B5EFC0B00F11CA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C264BB681B5EFC0B00F11CA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C264BB6F1B5EFC1700F11CA4 /* FFLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFLabel.swift; sourceTree = "<group>"; };
+		D88C5F011B66E4790043B1D7 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,7 +67,7 @@
 				C264BB5E1B5EFC0B00F11CA4 /* ViewController.m */,
 				C264BB601B5EFC0B00F11CA4 /* Main.storyboard */,
 				C264BB631B5EFC0B00F11CA4 /* Assets.xcassets */,
-				C264BB651B5EFC0B00F11CA4 /* LaunchScreen.storyboard */,
+				D88C5F011B66E4790043B1D7 /* LaunchScreen.xib */,
 				C264BB681B5EFC0B00F11CA4 /* Info.plist */,
 				C264BB571B5EFC0B00F11CA4 /* Supporting Files */,
 			);
@@ -148,8 +148,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C264BB671B5EFC0B00F11CA4 /* LaunchScreen.storyboard in Resources */,
 				C264BB641B5EFC0B00F11CA4 /* Assets.xcassets in Resources */,
+				D88C5F021B66E4790043B1D7 /* LaunchScreen.xib in Resources */,
 				C264BB621B5EFC0B00F11CA4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -177,14 +177,6 @@
 				C264BB611B5EFC0B00F11CA4 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		C264BB651B5EFC0B00F11CA4 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C264BB661B5EFC0B00F11CA4 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -313,6 +305,7 @@
 				C264BB6D1B5EFC0B00F11CA4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

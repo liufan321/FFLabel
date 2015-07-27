@@ -79,10 +79,10 @@ public class FFLabel: UILabel {
     private let patterns = ["[a-zA-Z]*://[a-zA-Z0-9/\\.]*", "#.*?#", "@[\\u4e00-\\u9fa5a-zA-Z0-9_-]*"]
     private func regexLinkRanges(attrString: NSAttributedString) {
         linkRanges.removeAll()
-        let regexRange = NSRange(location: 0, length: attrString.string.characters.count)
+        let regexRange = NSRange(location: 0, length: count(attrString.string))
         
         for pattern in patterns {
-            let regex = try! NSRegularExpression(pattern: pattern, options: NSRegularExpressionOptions.DotMatchesLineSeparators)
+            let regex = NSRegularExpression(pattern: pattern, options: NSRegularExpressionOptions.DotMatchesLineSeparators, error: nil)!
             let results = regex.matchesInString(attrString.string, options: NSMatchingOptions(rawValue: 0), range: regexRange)
             
             for r in results {
@@ -133,15 +133,15 @@ public class FFLabel: UILabel {
     }
     
     // MARK: - touch events
-    public override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        let location = touches.first!.locationInView(self)
+    public override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+        let location = (touches.first as! UITouch).locationInView(self)
         
         selectedRange = linkRangeAtLocation(location)
         modifySelectedAttribute(true)
     }
     
-    public override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        let location = touches.first!.locationInView(self)
+    public override func touchesMoved(touches: Set<NSObject>, withEvent event: UIEvent) {
+        let location = (touches.first as! UITouch).locationInView(self)
         
         if let range = linkRangeAtLocation(location) {
             if !(range.location == selectedRange?.location && range.length == selectedRange?.length) {
@@ -154,7 +154,7 @@ public class FFLabel: UILabel {
         }
     }
     
-    public override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    public override func touchesEnded(touches: Set<NSObject>, withEvent event: UIEvent) {
         if selectedRange != nil {
             let text = (textStorage.string as NSString).substringWithRange(selectedRange!)
             labelDelegate?.labelDidSelectedLinkText!(self, text: text)
@@ -166,7 +166,7 @@ public class FFLabel: UILabel {
         }
     }
     
-    public override func touchesCancelled(touches: Set<UITouch>?, withEvent event: UIEvent?) {
+    public override func touchesCancelled(touches: Set<NSObject>!, withEvent event: UIEvent!) {
         modifySelectedAttribute(false)
     }
     
@@ -216,7 +216,7 @@ public class FFLabel: UILabel {
         prepareLabel()
     }
 
-    required public init?(coder aDecoder: NSCoder) {
+    required public init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
         prepareLabel()
