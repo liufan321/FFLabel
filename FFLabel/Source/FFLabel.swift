@@ -61,6 +61,10 @@ public class FFLabel: UILabel {
     
     /// add link attribute
     private func addLinkAttribute(attrStringM: NSMutableAttributedString) {
+        if attrStringM.length == 0 {
+            return
+        }
+        
         var range = NSRange(location: 0, length: 0)
         var attributes = attrStringM.attributesAtIndex(0, effectiveRange: &range)
         
@@ -94,6 +98,10 @@ public class FFLabel: UILabel {
     /// add line break mode
     private func addLineBreak(attrString: NSAttributedString) -> NSMutableAttributedString {
         let attrStringM = NSMutableAttributedString(attributedString: attrString)
+        
+        if attrStringM.length == 0 {
+            return attrStringM
+        }
         
         var range = NSRange(location: 0, length: 0)
         var attributes = attrStringM.attributesAtIndex(0, effectiveRange: &range)
