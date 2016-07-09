@@ -22,7 +22,7 @@
     
     [self.view addSubview:s];
     
-    s.labelDelegate = self;
+    s.delegate = self;
     s.text = @"#FFLabel#This is a @FFLabel Demo, access http://github.com/liufan321/fflabel can get the demo project. Follow @liufan2000 to get more information.";
     
     [s setPreferredMaxLayoutWidth:[UIScreen mainScreen].bounds.size.width - 20];

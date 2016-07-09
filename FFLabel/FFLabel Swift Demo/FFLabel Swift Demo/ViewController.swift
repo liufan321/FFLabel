@@ -18,10 +18,10 @@ class ViewController: UIViewController, FFLabelDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        label.labelDelegate = self
+        label.delegate = self
         label.text = demoContent
-        label.font = UIFont.systemFontOfSize(20)
-        label.textColor = UIColor.darkGrayColor()
+        label.font = UIFont.systemFont(ofSize: 20)
+        label.textColor = UIColor.darkGray()
     }
     
     func labelDidSelectedLinkText(label: FFLabel, text: String) {

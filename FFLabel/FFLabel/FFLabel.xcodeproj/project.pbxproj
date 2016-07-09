@@ -160,6 +160,7 @@
 				TargetAttributes = {
 					C2043BAD1B5A61C3003BEBA6 = {
 						CreatedOnToolsVersion = 7.0;
+						LastSwiftMigration = 0800;
 					};
 					C2043BB71B5A61C3003BEBA6 = {
 						CreatedOnToolsVersion = 7.0;
@@ -334,6 +335,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -352,6 +354,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.joyios.FFLabel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
